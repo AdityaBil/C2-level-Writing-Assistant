@@ -215,13 +215,13 @@ with st.sidebar:
     provider_key = provider_mapping[selected_provider_label]
 
     # Model Selection / Input
-    default_model = llm_client.get_config_val("LLM_MODEL", llm_client.DEFAULT_MODELS.get(provider_key, "openai/gpt-oss-120b"))
+    default_model = llm_client.get_config_val("LLM_MODEL", llm_client.DEFAULT_MODELS.get(provider_key, "qwen/qwen3.8-27b"))
 
     if provider_key == "groq":
-        model_options = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "groq/compound", "groq/compound-mini", "qwen/qwen3.8-27b", "Custom Groq Model..."]
+        model_options = ["qwen/qwen3.8-27b", "groq/compound-mini", "groq/compound", "openai/gpt-oss-20b", "openai/gpt-oss-120b", "Custom Groq Model..."]
         model_choice = st.selectbox("Model", options=model_options, index=0)
         if model_choice == "Custom Groq Model...":
-            active_model = st.text_input("Custom Model ID", value="openai/gpt-oss-120b")
+            active_model = st.text_input("Custom Model ID", value="qwen/qwen3.8-27b")
         else:
             active_model = model_choice
     elif provider_key == "openai":

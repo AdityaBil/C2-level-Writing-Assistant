@@ -90,7 +90,7 @@ class NetworkTimeoutError(LLMClientError):
 # --------------------------------------------------------------------------- #
 
 DEFAULT_MODELS: Dict[str, str] = {
-    "groq": "openai/gpt-oss-120b",
+    "groq": "qwen/qwen3.8-27b",
     "openai": "gpt-4o-mini",
     "openrouter": "meta-llama/llama-3.3-70b-instruct",
     "custom": "default",
