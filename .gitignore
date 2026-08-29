@@ -1,0 +1,36 @@
+# Environments & Keys
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs & Temp files
+*.log
+scratch/
+.tmp/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Model weights / large checkpoints (if any generated in training)
+*.safetensors
+*.bin
+*.pt
+training/llama-3-c2-adapter/checkpoint-*/

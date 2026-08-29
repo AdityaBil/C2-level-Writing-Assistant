@@ -1,0 +1,8 @@
+# Lightweight C2 English Writing Assistant Requirements
+# Pure API-driven architecture — zero local GPU or PyTorch requirement
+
+streamlit>=1.38.0
+python-dotenv>=1.0.0
+groq>=0.11.0
+openai>=1.40.0
+requests>=2.31.0

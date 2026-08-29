@@ -1,0 +1,22 @@
+# Pinned, mutually compatible set — the code is written against these versions.
+#
+# NOTE ON TORCH: the plain `torch==2.4.0` wheel below is the CPU/default build on
+# some platforms. For CUDA 12.1 install torch first with:
+#   pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu121
+# then run `pip install -r requirements.txt`.
+
+torch==2.4.0
+transformers==4.44.2
+peft==0.12.0
+trl==0.9.6
+bitsandbytes==0.43.3
+datasets==2.21.0
+accelerate==0.33.0
+streamlit==1.38.0
+
+# Transitive pins kept explicit so the stack stays reproducible.
+huggingface_hub==0.24.6
+safetensors==0.4.5
+sentencepiece==0.2.0
+numpy==1.26.4
+protobuf==4.25.4
